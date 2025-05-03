@@ -1,40 +1,40 @@
 @echo off
 chcp 65001 > nul
 
-:: 显示当前分支
-echo 当前分支:
+:: Show current branch
+echo Current branch:
 git branch | findstr "*"
 
-:: 添加所有更改
-echo 添加更改...
+:: Add all changes
+echo Adding changes...
 git add .
 
-:: 获取提交信息
-set /p commit_message=请输入提交信息:
+:: Get commit message
+set /p commit_message=Enter commit message:
 
-:: 提交更改
-echo 提交更改...
+:: Commit changes
+echo Committing changes...
 git commit -m "%commit_message%"
 
-:: 推送到GitHub
-echo 推送到GitHub...
+:: Push to GitHub
+echo Pushing to GitHub...
 git push github main
 if errorlevel 1 (
-    echo GitHub推送失败!
+    echo GitHub push failed!
     exit /b 1
 ) else (
-    echo GitHub推送成功!
+    echo GitHub push successful!
 )
 
-:: 推送到Gitee
-echo 推送到Gitee...
+:: Push to Gitee
+echo Pushing to Gitee...
 git push gitee main
 if errorlevel 1 (
-    echo Gitee推送失败!
+    echo Gitee push failed!
     exit /b 1
 ) else (
-    echo Gitee推送成功!
+    echo Gitee push successful!
 )
 
-echo 所有操作完成!
+echo All operations completed!
 pause 
