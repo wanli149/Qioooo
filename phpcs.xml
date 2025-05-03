@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="QIoooo">
+  <description>QIoooo PHP 代码规范</description>
+  <rule ref="PSR12" />
+  <file>./inc/</file>
+  <file>./admin/</file>
+  <file>./page-templates/</file>
+  <file>./template-parts/</file>
+</ruleset> 

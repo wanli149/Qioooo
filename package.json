@@ -1,0 +1,48 @@
+{
+    "name": "qioooo-theme",
+    "version": "1.0.0",
+    "description": "QIoooo Theme with enhanced security",
+    "main": "js/main.js",
+    "scripts": {
+        "start": "wp-scripts start",
+        "build": "webpack --mode production",
+        "dev": "webpack --mode development --watch",
+        "lint:js": "eslint js/ admin/assets/js/ blocks/",
+        "lint:css": "stylelint \"**/*.css\" \"**/*.scss\"",
+        "lint:css:fix": "stylelint \"**/*.css\" \"**/*.scss\" --fix",
+        "lint:php": "phpcs --standard=phpcs.xml .",
+        "lint": "npm run lint:js && npm run lint:css && npm run lint:php",
+        "lint:fix": "npm run lint:js -- --fix && npm run lint:css:fix && npm run lint:php -- --fix",
+        "watch:css": "stylelint \"**/*.css\" \"**/*.scss\" --watch",
+        "test": "echo \"请根据实际情况集成 Jest 或 PHPUnit\"",
+        "scss": "sass css/main.scss:css/style.css --watch --style compressed",
+        "scss:build": "sass css/main.scss:css/style.css --style compressed"
+    },
+    "devDependencies": {
+        "@wordpress/eslint-plugin": "^22.8.0",
+        "@wordpress/scripts": "^26.0.0",
+        "@wordpress/stylelint-config": "^23.14.0",
+        "eslint": "^8.57.1",
+        "eslint-plugin-react": "^7.37.5",
+        "postcss": "^8.5.3",
+        "postcss-scss": "^4.0.9",
+        "sass": "^1.71.0",
+        "stylelint": "^15.11.0",
+        "stylelint-config-recommended": "^13.0.0",
+        "stylelint-config-recommended-scss": "^13.0.0",
+        "stylelint-config-standard": "^34.0.0",
+        "stylelint-config-standard-scss": "^11.0.0",
+        "stylelint-scss": "^5.3.1",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4",
+        "terser-webpack-plugin": "^5.3.9",
+        "css-minimizer-webpack-plugin": "^5.0.1",
+        "mini-css-extract-plugin": "^2.7.6",
+        "crypto-js": "^4.1.1"
+    },
+    "dependencies": {
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "@fortawesome/fontawesome-free": "^6.4.0"
+    }
+}

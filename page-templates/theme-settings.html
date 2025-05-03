@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主题设置 - QIoooo后台</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <!-- 后台侧边栏 -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>QIoooo后台</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i> 控制台
+                    </a>
+                </li>
+                <li>
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i> 文章管理
+                    </a>
+                </li>
+                <li>
+                    <a href="categories.html">
+                        <i class="fas fa-folder"></i> 分类管理
+                    </a>
+                </li>
+                <li>
+                    <a href="resources.html">
+                        <i class="fas fa-download"></i> 资源管理
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="theme-settings.html">
+                        <i class="fas fa-paint-brush"></i> 主题设置
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i> 用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i> 系统设置
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 后台主内容区 -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <div class="header-left">
+                <button class="btn-toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>主题设置</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <img src="../images/admin-avatar.jpg" alt="管理员头像" class="avatar">
+                    <span class="username">管理员</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="theme-settings">
+                <div class="theme-settings-header">
+                    <h1>QIoooo 主题设置</h1>
+                    <div class="theme-info">
+                        <p>主题：QIoooo 版本：1.0.0</p>
+                        <p>作者：<a href="https://github.com/wanli149" target="_blank">Wanli</a></p>
+                        <p>联系邮箱：<a href="mailto:wanli149@163.com">wanli149@163.com</a></p>
+                    </div>
+                </div>
+                <!-- 主题设置表单 -->
+                <form class="theme-form">
+                    <!-- 基础设置 -->
+                    <section class="settings-section">
+                        <h2>基础设置</h2>
+                        <div class="form-group">
+                            <label>网站标题</label>
+                            <input type="text" value="QIoooo">
+                        </div>
+                        <div class="form-group">
+                            <label>网站描述</label>
+                            <textarea>QIoooo - 一个优秀的WordPress主题</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Logo</label>
+                            <div class="upload-box">
+                                <img src="../images/logo.png" alt="Logo">
+                                <button type="button" class="btn-upload">上传新Logo</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 颜色设置 -->
+                    <section class="settings-section">
+                        <h2>颜色设置</h2>
+                        <div class="form-group">
+                            <label>主题色方案</label>
+                            <div class="color-schemes">
+                                <div class="color-scheme active">
+                                    <div class="color-preview" style="background: #007bff;"></div>
+                                    <span>科技蓝</span>
+                                </div>
+                                <div class="color-scheme">
+                                    <div class="color-preview" style="background: #fd7e14;"></div>
+                                    <span>活力橙</span>
+                                </div>
+                                <div class="color-scheme">
+                                    <div class="color-preview" style="background: #0a3d62;"></div>
+                                    <span>沉稳深蓝</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>自定义主色</label>
+                            <input type="color" value="#007bff">
+                        </div>
+                        <div class="form-group">
+                            <label>强调色</label>
+                            <input type="color" value="#ffc107">
+                        </div>
+                    </section>
+
+                    <!-- 布局设置 -->
+                    <section class="settings-section">
+                        <h2>布局设置</h2>
+                        <div class="form-group">
+                            <label>首页布局</label>
+                            <div class="layout-options">
+                                <div class="layout-option active" data-layout="magazine">
+                                    <div class="layout-preview">
+                                        <img src="../images/layout-magazine.jpg" alt="杂志布局">
+                                    </div>
+                                    <span>杂志布局</span>
+                                    <div class="layout-settings">
+                                        <div class="form-group">
+                                            <label>特色文章数量</label>
+                                            <input type="number" name="featured_posts" min="1" max="5" value="3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>文章展示方式</label>
+                                            <select name="post_display">
+                                                <option value="excerpt">摘要</option>
+                                                <option value="full">全文</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>每页文章数</label>
+                                            <input type="number" name="posts_per_page" min="1" max="20" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout-option" data-layout="grid">
+                                    <div class="layout-preview">
+                                        <img src="../images/layout-grid.jpg" alt="网格布局">
+                                    </div>
+                                    <span>网格布局</span>
+                                    <div class="layout-settings">
+                                        <div class="form-group">
+                                            <label>网格列数</label>
+                                            <select name="grid_columns">
+                                                <option value="2">2列</option>
+                                                <option value="3">3列</option>
+                                                <option value="4">4列</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>文章卡片样式</label>
+                                            <select name="card_style">
+                                                <option value="simple">简约</option>
+                                                <option value="modern">现代</option>
+                                                <option value="classic">经典</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>图片比例</label>
+                                            <select name="image_ratio">
+                                                <option value="16:9">16:9</option>
+                                                <option value="4:3">4:3</option>
+                                                <option value="1:1">1:1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout-option" data-layout="list">
+                                    <div class="layout-preview">
+                                        <img src="../images/layout-list.jpg" alt="列表布局">
+                                    </div>
+                                    <span>列表布局</span>
+                                    <div class="layout-settings">
+                                        <div class="form-group">
+                                            <label>列表样式</label>
+                                            <select name="list_style">
+                                                <option value="standard">标准</option>
+                                                <option value="compact">紧凑</option>
+                                                <option value="detailed">详细</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>缩略图位置</label>
+                                            <select name="thumbnail_position">
+                                                <option value="left">左侧</option>
+                                                <option value="right">右侧</option>
+                                                <option value="none">无缩略图</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>显示元信息</label>
+                                            <div class="meta-options">
+                                                <label>
+                                                    <input type="checkbox" name="show_date" checked> 发布日期
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="show_author" checked> 作者
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="show_category" checked> 分类
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="show_comments" checked> 评论数
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>侧边栏位置</label>
+                            <div class="sidebar-options">
+                                <div class="sidebar-option active" data-position="right">
+                                    <div class="sidebar-preview">
+                                        <img src="../images/sidebar-right.jpg" alt="右侧边栏">
+                                    </div>
+                                    <span>右侧</span>
+                                </div>
+                                <div class="sidebar-option" data-position="left">
+                                    <div class="sidebar-preview">
+                                        <img src="../images/sidebar-left.jpg" alt="左侧边栏">
+                                    </div>
+                                    <span>左侧</span>
+                                </div>
+                                <div class="sidebar-option" data-position="none">
+                                    <div class="sidebar-preview">
+                                        <img src="../images/sidebar-none.jpg" alt="无侧边栏">
+                                    </div>
+                                    <span>无侧边栏</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>响应式布局</label>
+                            <div class="responsive-settings">
+                                <div class="form-group">
+                                    <label>移动端布局</label>
+                                    <select name="mobile_layout">
+                                        <option value="stack">堆叠式</option>
+                                        <option value="list">列表式</option>
+                                        <option value="grid">网格式</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>平板布局</label>
+                                    <select name="tablet_layout">
+                                        <option value="grid">网格式</option>
+                                        <option value="list">列表式</option>
+                                        <option value="magazine">杂志式</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>断点设置</label>
+                                    <div class="breakpoint-settings">
+                                        <div class="breakpoint-item">
+                                            <label>移动端</label>
+                                            <input type="number" name="mobile_breakpoint" value="768" min="320" max="1024"> px
+                                        </div>
+                                        <div class="breakpoint-item">
+                                            <label>平板</label>
+                                            <input type="number" name="tablet_breakpoint" value="1024" min="768" max="1440"> px
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>高级布局设置</label>
+                            <div class="advanced-layout-settings">
+                                <!-- 文章卡片样式 -->
+                                <div class="form-group">
+                                    <label>文章卡片样式</label>
+                                    <div class="card-style-settings">
+                                        <div class="form-group">
+                                            <label>卡片圆角</label>
+                                            <input type="range" name="card_border_radius" min="0" max="20" value="8">
+                                            <span class="radius-value">8px</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>卡片阴影</label>
+                                            <select name="card_shadow">
+                                                <option value="none">无阴影</option>
+                                                <option value="light">轻微阴影</option>
+                                                <option value="medium">中等阴影</option>
+                                                <option value="strong">强烈阴影</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>卡片悬停效果</label>
+                                            <select name="card_hover_effect">
+                                                <option value="none">无效果</option>
+                                                <option value="scale">放大</option>
+                                                <option value="lift">上浮</option>
+                                                <option value="shadow">阴影增强</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 文章间距设置 -->
+                                <div class="form-group">
+                                    <label>文章间距设置</label>
+                                    <div class="spacing-settings">
+                                        <div class="form-group">
+                                            <label>文章间距</label>
+                                            <input type="range" name="article_spacing" min="10" max="50" value="20">
+                                            <span class="spacing-value">20px</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>行间距</label>
+                                            <input type="range" name="line_height" min="1" max="2" step="0.1" value="1.5">
+                                            <span class="line-height-value">1.5</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>段落间距</label>
+                                            <input type="range" name="paragraph_spacing" min="10" max="30" value="15">
+                                            <span class="paragraph-spacing-value">15px</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 动画效果 -->
+                                <div class="form-group">
+                                    <label>动画效果</label>
+                                    <div class="animation-settings">
+                                        <div class="form-group">
+                                            <label>页面加载动画</label>
+                                            <select name="page_load_animation">
+                                                <option value="none">无动画</option>
+                                                <option value="fade">淡入</option>
+                                                <option value="slide">滑入</option>
+                                                <option value="zoom">缩放</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>滚动动画</label>
+                                            <select name="scroll_animation">
+                                                <option value="none">无动画</option>
+                                                <option value="fade">淡入淡出</option>
+                                                <option value="slide">滑动</option>
+                                                <option value="parallax">视差</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>动画速度</label>
+                                            <select name="animation_speed">
+                                                <option value="slow">慢速</option>
+                                                <option value="normal" selected>正常</option>
+                                                <option value="fast">快速</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 自定义布局 -->
+                                <div class="form-group">
+                                    <label>自定义布局</label>
+                                    <div class="custom-layout-settings">
+                                        <div class="form-group">
+                                            <label>自定义CSS</label>
+                                            <textarea name="custom_css" rows="4" placeholder="输入自定义CSS代码"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>布局模板</label>
+                                            <select name="layout_template">
+                                                <option value="default">默认模板</option>
+                                                <option value="custom">自定义模板</option>
+                                                <option value="import">导入模板</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>布局预览</label>
+                                            <div class="layout-preview-container">
+                                                <div class="preview-frame">
+                                                    <div class="preview-content">
+                                                        <!-- 布局预览内容 -->
+                                                    </div>
+                                                </div>
+                                                <div class="preview-controls">
+                                                    <button class="btn-refresh">刷新预览</button>
+                                                    <button class="btn-save-template">保存为模板</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 响应式断点 -->
+                                <div class="form-group">
+                                    <label>响应式断点</label>
+                                    <div class="breakpoint-settings">
+                                        <div class="form-group">
+                                            <label>移动端断点</label>
+                                            <div class="breakpoint-item">
+                                                <input type="number" name="mobile_breakpoint" value="768" min="320" max="1024">
+                                                <span>px</span>
+                                                <div class="breakpoint-preview">
+                                                    <div class="preview-device mobile"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>平板断点</label>
+                                            <div class="breakpoint-item">
+                                                <input type="number" name="tablet_breakpoint" value="1024" min="768" max="1440">
+                                                <span>px</span>
+                                                <div class="breakpoint-preview">
+                                                    <div class="preview-device tablet"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>桌面端断点</label>
+                                            <div class="breakpoint-item">
+                                                <input type="number" name="desktop_breakpoint" value="1440" min="1024" max="1920">
+                                                <span>px</span>
+                                                <div class="breakpoint-preview">
+                                                    <div class="preview-device desktop"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 社交设置 -->
+                    <section class="settings-section">
+                        <h2>社交设置</h2>
+                        <div class="form-group">
+                            <label>微信二维码</label>
+                            <div class="upload-box">
+                                <img src="../images/qrcode.jpg" alt="微信二维码">
+                                <button type="button" class="btn-upload">上传新二维码</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>微博链接</label>
+                            <input type="url" placeholder="https://weibo.com/...">
+                        </div>
+                        <div class="form-group">
+                            <label>QQ链接</label>
+                            <input type="url" placeholder="https://...">
+                        </div>
+                    </section>
+
+                    <!-- 备案信息 -->
+                    <section class="settings-section">
+                        <h2>备案信息</h2>
+                        <div class="form-group">
+                            <label>ICP备案号</label>
+                            <input type="text" value="京ICP备XXXXXXXX号">
+                        </div>
+                        <div class="form-group">
+                            <label>公安备案号</label>
+                            <input type="text" placeholder="京公网安备XXXXXXXX号">
+                        </div>
+                    </section>
+
+                    <!-- 广告系统 -->
+                    <section class="settings-section">
+                        <h2>广告系统</h2>
+                        
+                        <!-- 广告统计 -->
+                        <div class="form-group">
+                            <label>广告统计</label>
+                            <div class="ad-settings">
+                                <div class="ad-stats">
+                                    <div class="stat-card">
+                                        <h3>总展示次数</h3>
+                                        <div class="stat-number">1,234,567</div>
+                                        <div class="stat-trend up">↑ 12.5%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>总点击次数</h3>
+                                        <div class="stat-number">12,345</div>
+                                        <div class="stat-trend up">↑ 8.3%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>点击率</h3>
+                                        <div class="stat-number">1.2%</div>
+                                        <div class="stat-trend down">↓ 0.5%</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>收入</h3>
+                                        <div class="stat-number">¥1,234.56</div>
+                                        <div class="stat-trend up">↑ 15.2%</div>
+                                    </div>
+                                </div>
+                                <div class="ad-chart">
+                                    <canvas id="adStatsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告轮播设置 -->
+                        <div class="form-group">
+                            <label>广告轮播设置</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="ad_carousel_enabled"> 启用广告轮播
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>轮播广告列表</label>
+                                    <div class="ad-carousel-list">
+                                        <div class="ad-carousel-item">
+                                            <div class="ad-preview">
+                                                <img src="../images/ad-placeholder.jpg" alt="广告预览">
+                                            </div>
+                                            <div class="ad-info">
+                                                <input type="text" placeholder="广告标题">
+                                                <textarea placeholder="广告代码"></textarea>
+                                                <div class="ad-meta">
+                                                    <input type="number" placeholder="显示时长(秒)" min="1" value="5">
+                                                    <input type="number" placeholder="权重" min="1" max="10" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="ad-actions">
+                                                <button class="btn-move-up">上移</button>
+                                                <button class="btn-move-down">下移</button>
+                                                <button class="btn-delete">删除</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-add-ad">添加广告</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>轮播切换效果</label>
+                                    <select name="carousel_effect">
+                                        <option value="fade">淡入淡出</option>
+                                        <option value="slide">滑动</option>
+                                        <option value="flip">翻转</option>
+                                        <option value="zoom">缩放</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>自动播放</label>
+                                    <div class="checkbox-group">
+                                        <label>
+                                            <input type="checkbox" name="carousel_autoplay" checked> 启用自动播放
+                                        </label>
+                                        <input type="number" name="carousel_interval" min="1" value="5" placeholder="间隔时间(秒)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告时间控制 -->
+                        <div class="form-group">
+                            <label>广告时间控制</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>显示时间段</label>
+                                    <div class="time-range">
+                                        <input type="time" name="ad_start_time" value="08:00">
+                                        <span>至</span>
+                                        <input type="time" name="ad_end_time" value="22:00">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>显示日期</label>
+                                    <div class="date-range">
+                                        <input type="date" name="ad_start_date">
+                                        <span>至</span>
+                                        <input type="date" name="ad_end_date">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>显示频率</label>
+                                    <div class="frequency-settings">
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="1"> 周一
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="2"> 周二
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="3"> 周三
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="4"> 周四
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="5"> 周五
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="6"> 周六
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="ad_weekday[]" value="7"> 周日
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告点击统计 -->
+                        <div class="form-group">
+                            <label>广告点击统计</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="click_tracking_enabled"> 启用点击统计
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>统计方式</label>
+                                    <select name="click_tracking_method">
+                                        <option value="cookie">Cookie跟踪</option>
+                                        <option value="ip">IP跟踪</option>
+                                        <option value="user">用户跟踪</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>统计周期</label>
+                                    <select name="click_tracking_period">
+                                        <option value="hourly">每小时</option>
+                                        <option value="daily">每天</option>
+                                        <option value="weekly">每周</option>
+                                        <option value="monthly">每月</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>点击统计报表</label>
+                                    <div class="click-stats-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>广告位置</th>
+                                                    <th>展示次数</th>
+                                                    <th>点击次数</th>
+                                                    <th>点击率</th>
+                                                    <th>收入</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>头部广告</td>
+                                                    <td>123,456</td>
+                                                    <td>1,234</td>
+                                                    <td>1.0%</td>
+                                                    <td>¥123.45</td>
+                                                </tr>
+                                                <!-- 更多统计行 -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告预览 -->
+                        <div class="form-group">
+                            <label>广告预览</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>预览设备</label>
+                                    <div class="preview-devices">
+                                        <button class="btn-device active" data-device="desktop">
+                                            <i class="fas fa-desktop"></i> 桌面端
+                                        </button>
+                                        <button class="btn-device" data-device="tablet">
+                                            <i class="fas fa-tablet-alt"></i> 平板
+                                        </button>
+                                        <button class="btn-device" data-device="mobile">
+                                            <i class="fas fa-mobile-alt"></i> 手机
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="ad-preview-container">
+                                        <div class="preview-frame desktop">
+                                            <div class="preview-content">
+                                                <!-- 广告预览内容 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 全局广告设置 -->
+                        <div class="form-group">
+                            <label>全局广告设置</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="global_ad_enabled"> 启用全局广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告显示规则</label>
+                                    <div class="ad-rules">
+                                        <label>
+                                            <input type="checkbox" name="global_ad_rule_home"> 首页显示
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="global_ad_rule_category"> 分类页显示
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="global_ad_rule_tag"> 标签页显示
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="global_ad_rule_archive"> 归档页显示
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="global_ad_rule_search"> 搜索页显示
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告位置</label>
+                                    <select>
+                                        <option>页面顶部</option>
+                                        <option>页面底部</option>
+                                        <option>内容区域顶部</option>
+                                        <option>内容区域底部</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 弹窗广告 -->
+                        <div class="form-group">
+                            <label>弹窗广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="popup_ad_enabled"> 启用弹窗广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>弹窗类型</label>
+                                    <select name="popup_type">
+                                        <option value="modal">模态弹窗</option>
+                                        <option value="toast">提示弹窗</option>
+                                        <option value="slide">滑动弹窗</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>弹窗位置</label>
+                                    <select name="popup_position">
+                                        <option value="center">居中显示</option>
+                                        <option value="top">顶部显示</option>
+                                        <option value="bottom">底部显示</option>
+                                        <option value="left">左侧显示</option>
+                                        <option value="right">右侧显示</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>弹窗触发方式</label>
+                                    <select name="popup_trigger">
+                                        <option value="page_load">页面加载后</option>
+                                        <option value="time_delay">延迟显示</option>
+                                        <option value="scroll">滚动触发</option>
+                                        <option value="exit">退出页面时</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>延迟时间（秒）</label>
+                                    <input type="number" name="popup_delay" min="0" value="3">
+                                </div>
+                                <div class="form-group">
+                                    <label>滚动距离（%）</label>
+                                    <input type="number" name="popup_scroll" min="0" max="100" value="50">
+                                </div>
+                                <div class="form-group">
+                                    <label>弹窗尺寸</label>
+                                    <div class="ad-size">
+                                        <input type="number" name="popup_width" placeholder="宽度" min="0"> × 
+                                        <input type="number" name="popup_height" placeholder="高度" min="0"> px
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>显示频率</label>
+                                    <select name="popup_frequency">
+                                        <option value="every_time">每次访问</option>
+                                        <option value="once_per_day">每天一次</option>
+                                        <option value="once_per_week">每周一次</option>
+                                        <option value="once_per_month">每月一次</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 头部广告 -->
+                        <div class="form-group">
+                            <label>头部广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="header_ad_enabled"> 启用头部广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告尺寸</label>
+                                    <div class="ad-size">
+                                        <input type="number" placeholder="宽度" min="0"> × 
+                                        <input type="number" placeholder="高度" min="0"> px
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 侧边栏广告 -->
+                        <div class="form-group">
+                            <label>侧边栏广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="sidebar_ad_enabled"> 启用侧边栏广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告位置</label>
+                                    <select>
+                                        <option>侧边栏顶部</option>
+                                        <option>侧边栏中部</option>
+                                        <option>侧边栏底部</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 文章内广告 -->
+                        <div class="form-group">
+                            <label>文章内广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="content_ad_enabled"> 启用文章内广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告位置</label>
+                                    <select>
+                                        <option>文章开头</option>
+                                        <option>文章中间</option>
+                                        <option>文章结尾</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 底部广告 -->
+                        <div class="form-group">
+                            <label>底部广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="footer_ad_enabled"> 启用底部广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 移动端广告 -->
+                        <div class="form-group">
+                            <label>移动端广告</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="mobile_ad_enabled"> 启用移动端广告
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告位置</label>
+                                    <select>
+                                        <option>文章列表顶部</option>
+                                        <option>文章列表底部</option>
+                                        <option>文章内容顶部</option>
+                                        <option>文章内容底部</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告代码</label>
+                                    <textarea placeholder="请粘贴广告代码" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告分组 -->
+                        <div class="form-group">
+                            <label>广告分组</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="ad_groups_enabled"> 启用广告分组
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>广告组列表</label>
+                                    <div class="ad-groups-list">
+                                        <div class="ad-group-item">
+                                            <div class="group-header">
+                                                <input type="text" placeholder="组名称" value="默认组">
+                                                <div class="group-actions">
+                                                    <button class="btn-edit-group">编辑</button>
+                                                    <button class="btn-delete-group">删除</button>
+                                                </div>
+                                            </div>
+                                            <div class="group-content">
+                                                <div class="form-group">
+                                                    <label>组内广告</label>
+                                                    <div class="group-ads">
+                                                        <div class="group-ad-item">
+                                                            <input type="text" placeholder="广告名称">
+                                                            <textarea placeholder="广告代码"></textarea>
+                                                            <div class="ad-meta">
+                                                                <input type="number" placeholder="权重" min="1" max="10" value="1">
+                                                                <input type="number" placeholder="展示次数" min="0" value="0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn-add-group-ad">添加广告</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>组显示规则</label>
+                                                    <div class="group-rules">
+                                                        <label>
+                                                            <input type="checkbox" name="group_rule_home"> 首页显示
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="group_rule_category"> 分类页显示
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="group_rule_tag"> 标签页显示
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="group_rule_archive"> 归档页显示
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-add-group">添加广告组</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- A/B测试 -->
+                        <div class="form-group">
+                            <label>A/B测试</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="ab_testing_enabled"> 启用A/B测试
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>测试组设置</label>
+                                    <div class="ab-test-groups">
+                                        <div class="ab-test-group">
+                                            <div class="test-group-header">
+                                                <input type="text" placeholder="测试名称" value="广告A/B测试">
+                                                <select name="test_type">
+                                                    <option value="ad_content">广告内容</option>
+                                                    <option value="ad_position">广告位置</option>
+                                                    <option value="ad_size">广告尺寸</option>
+                                                    <option value="ad_style">广告样式</option>
+                                                </select>
+                                            </div>
+                                            <div class="test-group-content">
+                                                <div class="form-group">
+                                                    <label>测试版本</label>
+                                                    <div class="test-versions">
+                                                        <div class="test-version">
+                                                            <h4>版本A</h4>
+                                                            <textarea placeholder="版本A广告代码"></textarea>
+                                                            <div class="version-meta">
+                                                                <input type="number" placeholder="流量分配(%)" min="0" max="100" value="50">
+                                                                <input type="number" placeholder="目标转化率(%)" min="0" max="100" value="2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="test-version">
+                                                            <h4>版本B</h4>
+                                                            <textarea placeholder="版本B广告代码"></textarea>
+                                                            <div class="version-meta">
+                                                                <input type="number" placeholder="流量分配(%)" min="0" max="100" value="50">
+                                                                <input type="number" placeholder="目标转化率(%)" min="0" max="100" value="2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>测试周期</label>
+                                                    <div class="test-period">
+                                                        <input type="date" name="test_start_date">
+                                                        <span>至</span>
+                                                        <input type="date" name="test_end_date">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>测试指标</label>
+                                                    <div class="test-metrics">
+                                                        <label>
+                                                            <input type="checkbox" name="test_metric_click"> 点击率
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="test_metric_conversion"> 转化率
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="test_metric_revenue"> 收入
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-add-test">添加测试</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 效果分析 -->
+                        <div class="form-group">
+                            <label>效果分析</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>分析时间范围</label>
+                                    <div class="analysis-period">
+                                        <select name="analysis_period">
+                                            <option value="today">今天</option>
+                                            <option value="yesterday">昨天</option>
+                                            <option value="last_7_days">最近7天</option>
+                                            <option value="last_30_days">最近30天</option>
+                                            <option value="custom">自定义</option>
+                                        </select>
+                                        <div class="custom-period" style="display: none;">
+                                            <input type="date" name="analysis_start_date">
+                                            <span>至</span>
+                                            <input type="date" name="analysis_end_date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>分析维度</label>
+                                    <div class="analysis-dimensions">
+                                        <label>
+                                            <input type="checkbox" name="dimension_time"> 时间维度
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="dimension_position"> 位置维度
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="dimension_device"> 设备维度
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="dimension_user"> 用户维度
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>分析指标</label>
+                                    <div class="analysis-metrics">
+                                        <label>
+                                            <input type="checkbox" name="metric_impression"> 展示量
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="metric_click"> 点击量
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="metric_ctr"> 点击率
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="metric_conversion"> 转化量
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="metric_cvr"> 转化率
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="metric_revenue"> 收入
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>分析报告</label>
+                                    <div class="analysis-report">
+                                        <div class="report-charts">
+                                            <canvas id="impressionChart"></canvas>
+                                            <canvas id="clickChart"></canvas>
+                                            <canvas id="revenueChart"></canvas>
+                                        </div>
+                                        <div class="report-table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>广告位置</th>
+                                                        <th>展示量</th>
+                                                        <th>点击量</th>
+                                                        <th>点击率</th>
+                                                        <th>转化量</th>
+                                                        <th>转化率</th>
+                                                        <th>收入</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>头部广告</td>
+                                                        <td>123,456</td>
+                                                        <td>1,234</td>
+                                                        <td>1.0%</td>
+                                                        <td>123</td>
+                                                        <td>10.0%</td>
+                                                        <td>¥123.45</td>
+                                                    </tr>
+                                                    <!-- 更多统计行 -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>导出报告</label>
+                                    <div class="export-options">
+                                        <button type="button" class="btn-export" data-format="csv">导出CSV</button>
+                                        <button type="button" class="btn-export" data-format="excel">导出Excel</button>
+                                        <button type="button" class="btn-export" data-format="pdf">导出PDF</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 广告投放目标 -->
+                        <div class="form-group">
+                            <label>广告投放目标</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>目标类型</label>
+                                    <div class="target-types">
+                                        <label>
+                                            <input type="radio" name="target_type" value="impression" checked> 展示量目标
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="target_type" value="click"> 点击量目标
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="target_type" value="conversion"> 转化量目标
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="target_type" value="revenue"> 收入目标
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>目标设置</label>
+                                    <div class="target-settings">
+                                        <div class="target-value">
+                                            <input type="number" name="target_value" min="0" value="1000">
+                                            <span class="target-unit">次/天</span>
+                                        </div>
+                                        <div class="target-period">
+                                            <input type="date" name="target_start_date">
+                                            <span>至</span>
+                                            <input type="date" name="target_end_date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>目标受众</label>
+                                    <div class="target-audience">
+                                        <div class="audience-filters">
+                                            <label>
+                                                <input type="checkbox" name="audience_device[]" value="desktop"> 桌面端
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="audience_device[]" value="tablet"> 平板
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="audience_device[]" value="mobile"> 手机
+                                            </label>
+                                        </div>
+                                        <div class="audience-location">
+                                            <label>地区</label>
+                                            <select name="audience_location" multiple>
+                                                <option value="china">中国大陆</option>
+                                                <option value="hongkong">香港</option>
+                                                <option value="macau">澳门</option>
+                                                <option value="taiwan">台湾</option>
+                                            </select>
+                                        </div>
+                                        <div class="audience-time">
+                                            <label>时段</label>
+                                            <div class="time-slots">
+                                                <label>
+                                                    <input type="checkbox" name="time_slot[]" value="morning"> 上午 (8:00-12:00)
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="time_slot[]" value="afternoon"> 下午 (12:00-18:00)
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="time_slot[]" value="evening"> 晚上 (18:00-22:00)
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="time_slot[]" value="night"> 夜间 (22:00-8:00)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 效果预测 -->
+                        <div class="form-group">
+                            <label>效果预测</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>预测模型</label>
+                                    <select name="prediction_model">
+                                        <option value="linear">线性回归</option>
+                                        <option value="time_series">时间序列</option>
+                                        <option value="machine_learning">机器学习</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>预测结果</label>
+                                    <div class="prediction-results">
+                                        <div class="prediction-chart">
+                                            <canvas id="predictionChart"></canvas>
+                                        </div>
+                                        <div class="prediction-metrics">
+                                            <div class="metric-item">
+                                                <h4>预计展示量</h4>
+                                                <div class="metric-value">1,234,567</div>
+                                                <div class="metric-confidence">置信度: 95%</div>
+                                            </div>
+                                            <div class="metric-item">
+                                                <h4>预计点击量</h4>
+                                                <div class="metric-value">12,345</div>
+                                                <div class="metric-confidence">置信度: 92%</div>
+                                            </div>
+                                            <div class="metric-item">
+                                                <h4>预计转化量</h4>
+                                                <div class="metric-value">1,234</div>
+                                                <div class="metric-confidence">置信度: 88%</div>
+                                            </div>
+                                            <div class="metric-item">
+                                                <h4>预计收入</h4>
+                                                <div class="metric-value">¥1,234.56</div>
+                                                <div class="metric-confidence">置信度: 90%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>影响因素分析</label>
+                                    <div class="factor-analysis">
+                                        <div class="factor-chart">
+                                            <canvas id="factorChart"></canvas>
+                                        </div>
+                                        <div class="factor-list">
+                                            <div class="factor-item positive">
+                                                <span class="factor-name">节假日</span>
+                                                <span class="factor-impact">+15%</span>
+                                            </div>
+                                            <div class="factor-item positive">
+                                                <span class="factor-name">天气</span>
+                                                <span class="factor-impact">+8%</span>
+                                            </div>
+                                            <div class="factor-item negative">
+                                                <span class="factor-name">竞争对手</span>
+                                                <span class="factor-impact">-5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 投放建议 -->
+                        <div class="form-group">
+                            <label>投放建议</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>优化建议</label>
+                                    <div class="optimization-suggestions">
+                                        <div class="suggestion-item">
+                                            <div class="suggestion-header">
+                                                <i class="fas fa-lightbulb"></i>
+                                                <h4>投放时间优化</h4>
+                                                <span class="suggestion-impact">预计提升: +20%</span>
+                                            </div>
+                                            <div class="suggestion-content">
+                                                <p>建议在以下时段增加投放：</p>
+                                                <ul>
+                                                    <li>工作日 10:00-12:00</li>
+                                                    <li>工作日 14:00-16:00</li>
+                                                    <li>周末 20:00-22:00</li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn-apply-suggestion">应用建议</button>
+                                        </div>
+                                        <div class="suggestion-item">
+                                            <div class="suggestion-header">
+                                                <i class="fas fa-lightbulb"></i>
+                                                <h4>广告内容优化</h4>
+                                                <span class="suggestion-impact">预计提升: +15%</span>
+                                            </div>
+                                            <div class="suggestion-content">
+                                                <p>建议优化广告文案：</p>
+                                                <ul>
+                                                    <li>添加限时优惠信息</li>
+                                                    <li>突出产品特点</li>
+                                                    <li>增加行动号召</li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn-apply-suggestion">应用建议</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>竞品分析</label>
+                                    <div class="competitor-analysis">
+                                        <div class="competitor-chart">
+                                            <canvas id="competitorChart"></canvas>
+                                        </div>
+                                        <div class="competitor-insights">
+                                            <h4>竞品投放策略</h4>
+                                            <ul>
+                                                <li>竞品A：主要投放时段 9:00-11:00</li>
+                                                <li>竞品B：重点投放移动端</li>
+                                                <li>竞品C：采用动态创意</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 预算控制 -->
+                        <div class="form-group">
+                            <label>预算控制</label>
+                            <div class="ad-settings">
+                                <div class="form-group">
+                                    <label>预算设置</label>
+                                    <div class="budget-settings">
+                                        <div class="budget-type">
+                                            <label>
+                                                <input type="radio" name="budget_type" value="daily" checked> 日预算
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="budget_type" value="total"> 总预算
+                                            </label>
+                                        </div>
+                                        <div class="budget-amount">
+                                            <input type="number" name="budget_value" min="0" step="0.01" value="100">
+                                            <span class="budget-currency">¥</span>
+                                        </div>
+                                        <div class="budget-period">
+                                            <input type="date" name="budget_start_date">
+                                            <span>至</span>
+                                            <input type="date" name="budget_end_date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>预算分配</label>
+                                    <div class="budget-allocation">
+                                        <div class="allocation-chart">
+                                            <canvas id="allocationChart"></canvas>
+                                        </div>
+                                        <div class="allocation-list">
+                                            <div class="allocation-item">
+                                                <span class="allocation-name">头部广告</span>
+                                                <div class="allocation-bar">
+                                                    <div class="bar-fill" style="width: 30%"></div>
+                                                </div>
+                                                <span class="allocation-value">30%</span>
+                                            </div>
+                                            <div class="allocation-item">
+                                                <span class="allocation-name">侧边栏广告</span>
+                                                <div class="allocation-bar">
+                                                    <div class="bar-fill" style="width: 20%"></div>
+                                                </div>
+                                                <span class="allocation-value">20%</span>
+                                            </div>
+                                            <div class="allocation-item">
+                                                <span class="allocation-name">文章内广告</span>
+                                                <div class="allocation-bar">
+                                                    <div class="bar-fill" style="width: 50%"></div>
+                                                </div>
+                                                <span class="allocation-value">50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>预算预警</label>
+                                    <div class="budget-alerts">
+                                        <div class="alert-settings">
+                                            <label>
+                                                <input type="checkbox" name="alert_low_budget"> 预算不足预警
+                                            </label>
+                                            <input type="number" name="alert_threshold" min="0" max="100" value="20">
+                                            <span>%</span>
+                                        </div>
+                                        <div class="alert-settings">
+                                            <label>
+                                                <input type="checkbox" name="alert_overspend"> 超支预警
+                                            </label>
+                                            <input type="number" name="overspend_threshold" min="0" max="100" value="10">
+                                            <span>%</span>
+                                        </div>
+                                        <div class="alert-notifications">
+                                            <label>
+                                                <input type="checkbox" name="notify_email"> 邮件通知
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="notify_sms"> 短信通知
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 保存按钮 -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-save">保存设置</button>
+                        <button type="button" class="btn-reset">重置</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html> 

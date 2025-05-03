@@ -1,0 +1,321 @@
+@use 'variables' as *;
+
+// 按钮
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: map-get($spacing, '2') map-get($spacing, '3');
+  font-family: map-get($font-family, 'sans');
+  font-size: map-get($font-size, 'base');
+  font-weight: map-get($font-weight, 'medium');
+  line-height: map-get($line-height, 'normal');
+  color: white;
+  background-color: var(--theme-primary);
+  border: $border-width solid transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all map-get($transition, 'normal') map-get($timing-function, 'ease');
+  
+  &:hover {
+    background-color: darken(map-get($colors, 'theme-primary-tech'), 10%);
+  }
+  
+  &-outline {
+    color: var(--theme-primary);
+    background-color: transparent;
+    border-color: var(--theme-primary);
+    
+    &:hover {
+      color: white;
+      background-color: var(--theme-primary);
+    }
+  }
+  
+  &-sm {
+    padding: map-get($spacing, '1') map-get($spacing, '2');
+    font-size: map-get($font-size, 'sm');
+  }
+  
+  &-lg {
+    padding: map-get($spacing, '3') map-get($spacing, '4');
+    font-size: map-get($font-size, 'lg');
+  }
+}
+
+// 卡片
+.card {
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+  transition: transform map-get($transition, 'normal') map-get($timing-function, 'ease');
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+  
+  &-header {
+    padding: map-get($spacing, '3');
+    border-bottom: $border-width solid $border-color;
+  }
+  
+  &-body {
+    padding: map-get($spacing, '3');
+  }
+  
+  &-footer {
+    padding: map-get($spacing, '3');
+    border-top: $border-width solid $border-color;
+  }
+}
+
+// 导航
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  &-item {
+    margin-right: map-get($spacing, '2');
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  &-link {
+    display: block;
+    padding: map-get($spacing, '2');
+    color: map-get($text-colors, 'primary');
+    text-decoration: none;
+    transition: color map-get($transition, 'normal') map-get($timing-function, 'ease');
+    
+    &:hover {
+      color: var(--theme-primary);
+    }
+    
+    &.active {
+      color: var(--theme-primary);
+      font-weight: map-get($font-weight, 'medium');
+    }
+  }
+}
+
+// 分页
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: map-get($spacing, '4') 0;
+  padding: 0;
+  
+  &-item {
+    margin: 0 map-get($spacing, '1');
+  }
+  
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 map-get($spacing, '2');
+    color: map-get($text-colors, 'primary');
+    text-decoration: none;
+    border-radius: $border-radius;
+    transition: all map-get($transition, 'normal') map-get($timing-function, 'ease');
+    
+    &:hover {
+      background-color: map-get($colors, 'gray-100');
+    }
+    
+    &.active {
+      color: white;
+      background-color: var(--theme-primary);
+    }
+  }
+}
+
+// 表单
+.form {
+  &-group {
+    margin-bottom: map-get($spacing, '3');
+  }
+  
+  &-label {
+    display: block;
+    margin-bottom: map-get($spacing, '1');
+    font-weight: map-get($font-weight, 'medium');
+    color: map-get($text-colors, 'primary');
+  }
+  
+  &-control {
+    display: block;
+    width: 100%;
+    padding: map-get($spacing, '2');
+    font-family: map-get($font-family, 'sans');
+    font-size: map-get($font-size, 'base');
+    line-height: map-get($line-height, 'normal');
+    color: map-get($text-colors, 'primary');
+    background-color: white;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    transition: border-color map-get($transition, 'normal') map-get($timing-function, 'ease');
+    
+    &:focus {
+      outline: none;
+      border-color: var(--theme-primary);
+    }
+    
+    &::placeholder {
+      color: map-get($text-colors, 'disabled');
+    }
+  }
+  
+  &-text {
+    display: block;
+    margin-top: map-get($spacing, '1');
+    font-size: map-get($font-size, 'sm');
+    color: map-get($text-colors, 'secondary');
+  }
+}
+
+// 标签
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: map-get($spacing, '1') map-get($spacing, '2');
+  font-size: map-get($font-size, 'sm');
+  color: map-get($text-colors, 'primary');
+  background-color: map-get($colors, 'gray-100');
+  border-radius: $border-radius;
+  
+  &-primary {
+    color: white;
+    background-color: var(--theme-primary);
+  }
+  
+  &-success {
+    color: white;
+    background-color: map-get($colors, 'success');
+  }
+  
+  &-warning {
+    color: white;
+    background-color: map-get($colors, 'warning');
+  }
+  
+  &-error {
+    color: white;
+    background-color: map-get($colors, 'error');
+  }
+}
+
+// 提示框
+.toast {
+  position: fixed;
+  top: map-get($spacing, '4');
+  right: map-get($spacing, '4');
+  padding: map-get($spacing, '3');
+  color: white;
+  background-color: map-get($colors, 'gray-800');
+  border-radius: $border-radius;
+  box-shadow: $shadow-lg;
+  animation: slideIn map-get($transition, 'normal') map-get($timing-function, 'ease');
+  
+  &-success {
+    background-color: map-get($colors, 'success');
+  }
+  
+  &-warning {
+    background-color: map-get($colors, 'warning');
+  }
+  
+  &-error {
+    background-color: map-get($colors, 'error');
+  }
+}
+
+// 骨架屏
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    map-get($colors, 'gray-200') 25%,
+    map-get($colors, 'gray-300') 37%,
+    map-get($colors, 'gray-200') 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  
+  &-text {
+    height: map-get($font-size, 'base');
+    border-radius: $border-radius;
+  }
+  
+  &-title {
+    height: map-get($font-size, 'xl');
+    border-radius: $border-radius;
+  }
+  
+  &-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+// 社交分享
+.social-share {
+  display: flex;
+  gap: map-get($spacing, '2');
+  
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    border-radius: 50%;
+    transition: transform map-get($transition, 'normal') map-get($timing-function, 'ease');
+    
+    &:hover {
+      transform: translateY(-4px);
+    }
+    
+    &.wechat {
+      background-color: #07c160;
+    }
+    
+    &.weibo {
+      background-color: #e6162d;
+    }
+    
+    &.qq {
+      background-color: #12b7f5;
+    }
+    
+    &.qzone {
+      background-color: #f7b500;
+    }
+  }
+}
+
+// 响应式布局
+@media (max-width: var(--breakpoint-md)) {
+  .card {
+    padding: var(--spacing-2);
+  }
+  
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .social-share {
+    justify-content: center;
+  }
+} 

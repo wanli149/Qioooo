@@ -1,0 +1,45 @@
+/* 区块编辑器通用样式 */
+.qioooo-block-editor {
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+}
+
+.qioooo-block-editor__preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+/* 区块设置面板样式 */
+.qioooo-block-settings {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.qioooo-block-settings__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .qioooo-block-editor {
+    padding: 0.8rem;
+  }
+
+  .qioooo-block-editor__preview {
+    padding: 0.8rem;
+  }
+
+  .qioooo-block-settings {
+    padding: 0.8rem;
+  }
+} 

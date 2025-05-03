@@ -1,0 +1,552 @@
+// 分类、标签和归档页面通用样式
+.category-page,
+.tag-page,
+.archive-page {
+  padding: 2rem 0;
+    
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+        
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+    
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+    
+  .category-description,
+  .tag-description {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+    
+  .filter-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+        
+    select,
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+            
+      &:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+    }
+        
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+            
+      &:hover {
+        background-color: var(--primary-color-dark);
+      }
+    }
+  }
+    
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+    
+  .post-item {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    transition: transform 0.3s, box-shadow 0.3s;
+        
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+    }
+        
+    .post-thumbnail {
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+        
+    .post-content {
+      padding: 1.5rem;
+            
+      .entry-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+                
+        a {
+          color: var(--text-primary);
+          text-decoration: none;
+                    
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+            
+      .entry-meta {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+                
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+      }
+            
+      .entry-summary {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+            
+      .entry-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+                
+        .entry-categories,
+        .entry-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+                    
+          a {
+            padding: 0.25rem 0.5rem;
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-decoration: none;
+                        
+            &:hover {
+              background-color: var(--primary-color);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+    
+  .no-posts {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    color: var(--text-secondary);
+  }
+}
+
+// 侧边栏样式
+.category-sidebar,
+.tag-sidebar,
+.archive-sidebar {
+  .subcategories,
+  .related-tags,
+  .popular-posts,
+  .archive-calendar,
+  .archive-months,
+  .archive-years {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+        
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+        
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+            
+      li {
+        margin-bottom: 0.5rem;
+                
+        a {
+          display: flex;
+          justify-content: space-between;
+          color: var(--text-secondary);
+          text-decoration: none;
+          padding: 0.5rem;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+                    
+          &:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--primary-color);
+          }
+                    
+          .count {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+    
+  .archive-calendar {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+            
+      caption {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+            
+      th,
+      td {
+        text-align: center;
+        padding: 0.5rem;
+      }
+            
+      th {
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+            
+      td {
+        a {
+          color: var(--primary-color);
+          text-decoration: none;
+                    
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 分页样式
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+    
+  .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+        
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+        
+    &.current {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+}
+
+// 评论页面样式
+.comments-page {
+  padding: 2rem 0;
+    
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+        
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+    
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+    
+  .comments-filters {
+    margin-bottom: 2rem;
+        
+    .filter-form {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+            
+      select,
+      button {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+        font-size: 0.9rem;
+                
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+        }
+      }
+            
+      button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+                
+        &:hover {
+          background-color: var(--primary-color-dark);
+        }
+      }
+    }
+  }
+    
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+    
+  .comment-item {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+        
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+            
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+            
+      .comment-meta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+                
+        .comment-date {
+          color: var(--text-secondary);
+          font-size: 0.9rem;
+        }
+                
+        .comment-status {
+          padding: 0.25rem 0.5rem;
+          border-radius: 4px;
+          font-size: 0.8rem;
+                    
+          &.status-1 {
+            background-color: var(--success-color);
+            color: white;
+          }
+                    
+          &.status-0 {
+            background-color: var(--warning-color);
+            color: white;
+          }
+                    
+          &.status-spam {
+            background-color: var(--danger-color);
+            color: white;
+          }
+        }
+      }
+            
+      .comment-post {
+        a {
+          color: var(--primary-color);
+          text-decoration: none;
+                    
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+        
+    .comment-content {
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+        
+    .comment-actions {
+      display: flex;
+      gap: 0.5rem;
+            
+      .button {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+                
+        &-primary {
+          background-color: var(--primary-color);
+          color: white;
+                    
+          &:hover {
+            background-color: var(--primary-color-dark);
+          }
+        }
+                
+        &-danger {
+          background-color: var(--danger-color);
+          color: white;
+                    
+          &:hover {
+            background-color: var(--danger-color-dark);
+          }
+        }
+                
+        &:not(.button-primary, .button-danger) {
+          background-color: var(--bg-tertiary);
+          color: var(--text-primary);
+                    
+          &:hover {
+            background-color: var(--border-color);
+          }
+        }
+      }
+    }
+  }
+    
+  .no-comments {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    color: var(--text-secondary);
+  }
+    
+  .comments-sidebar {
+    .comments-stats {
+      background-color: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+            
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+            
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+                
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid var(--border-color);
+                    
+          &:last-child {
+            border-bottom: none;
+          }
+                    
+          .stat-label {
+            color: var(--text-secondary);
+          }
+                    
+          .stat-number {
+            color: var(--text-primary);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+        
+    .recent-comments {
+      background-color: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 1.5rem;
+            
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+            
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+                
+        li {
+          margin-bottom: 1rem;
+                    
+          &:last-child {
+            margin-bottom: 0;
+          }
+                    
+          a {
+            display: block;
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-bottom: 0.25rem;
+                        
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+                    
+          .comment-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+  }
+}

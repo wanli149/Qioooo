@@ -1,0 +1,215 @@
+/* 评论系统样式 */
+.comments-area {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.comments-title {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.comment-body {
+  position: relative;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.comment-author .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.comment-author .fn {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.comment-author .says {
+  margin-left: 5px;
+  color: var(--secondary-color);
+}
+
+.comment-meta {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.comment-meta a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.comment-meta a:hover {
+  color: var(--primary-color);
+}
+
+.comment-content {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.comment-content p {
+  margin: 0 0 10px;
+}
+
+.comment-reply-link {
+  display: inline-block;
+  padding: 5px 15px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.comment-reply-link:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.comment-form {
+  margin-top: 40px;
+}
+
+.comment-form p {
+  margin-bottom: 20px;
+}
+
+.comment-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form input[type="url"]:focus,
+.comment-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.comment-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.comment-form .submit {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-form .submit:hover {
+  background: var(--accent-color);
+}
+
+.comment-notes {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.comment-notes .required {
+  color: #f00;
+}
+
+.must-log-in {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: var(--border-radius);
+  color: #856404;
+}
+
+.logged-in-as {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.logged-in-as a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logged-in-as a:hover {
+  color: var(--accent-color);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .comments-area {
+    margin: 20px 0;
+    padding: 15px;
+  }
+    
+  .comments-title {
+    font-size: 20px;
+  }
+    
+  .comment {
+    padding: 15px;
+  }
+    
+  .comment-author .avatar {
+    width: 50px;
+    height: 50px;
+  }
+    
+  .comment-form textarea {
+    min-height: 120px;
+  }
+} 

@@ -1,0 +1,24 @@
+// 该文件用于保持 tests 目录存在，可删除后添加实际测试用例。 {
+  // ... existing code ...
+  "globals": {
+    "jQuery": "readonly",
+    "$": "readonly",
+    "wp": "readonly",
+    "api": "readonly",
+    "utils": "readonly",
+    "qiooooSettings": "readonly",
+    "QRCode": "readonly",
+    "FastClick": "readonly",
+    "Hammer": "readonly"
+  },
+  "plugins": ["react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

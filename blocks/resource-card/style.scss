@@ -1,0 +1,32 @@
+.resource-card {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+
+  &--default {
+    background: #fff;
+  }
+
+  &--card {
+    background: #f8f9fa;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  }
+
+  &--list {
+    background: #fff;
+    border-left: 4px solid #0073aa;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+
+  &__description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

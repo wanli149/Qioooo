@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章标题 - QIoooo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏（与首页相同） -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">QIoooo</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="category.html">分类</a></li>
+                    <li><a href="resources.html">资源</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" class="btn-login">登录/注册</a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章内容区 -->
+    <main class="article-content">
+        <div class="container">
+            <article class="article">
+                <header class="article-header">
+                    <h1>文章标题示例</h1>
+                    <div class="article-meta">
+                        <span class="author">
+                            <i class="far fa-user"></i> 作者名
+                        </span>
+                        <span class="date">
+                            <i class="far fa-calendar"></i> 2024-01-01
+                        </span>
+                        <span class="views">
+                            <i class="far fa-eye"></i> 1000
+                        </span>
+                        <span class="tags">
+                            <i class="fas fa-tags"></i>
+                            <a href="#" class="tag">技术</a>
+                            <a href="#" class="tag">设计</a>
+                        </span>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <p>文章内容...</p>
+                    <!-- 更多文章内容 -->
+                </div>
+
+                <footer class="article-footer">
+                    <div class="social-share">
+                        <span>分享到：</span>
+                        <a href="#" class="share-btn wechat" data-toggle="modal" data-target="#wechatModal">
+                            <i class="fab fa-weixin"></i> 微信
+                        </a>
+                        <a href="#" class="share-btn weibo">
+                            <i class="fab fa-weibo"></i> 微博
+                        </a>
+                        <a href="#" class="share-btn qq">
+                            <i class="fab fa-qq"></i> QQ
+                        </a>
+                    </div>
+
+                    <div class="reward">
+                        <button class="btn-reward" data-toggle="modal" data-target="#rewardModal">
+                            <i class="fas fa-coffee"></i> 打赏支持
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- 作者信息 -->
+            <div class="author-box">
+                <div class="author-avatar">
+                    <img src="images/avatar.jpg" alt="作者头像">
+                </div>
+                <div class="author-info">
+                    <h3>作者名</h3>
+                    <p>作者简介...</p>
+                    <div class="author-social">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <h3>评论 (50)</h3>
+                <div class="comment-form">
+                    <textarea placeholder="写下你的评论..."></textarea>
+                    <button class="btn-submit">发表评论</button>
+                </div>
+                <div class="comments-list">
+                    <!-- 评论列表 -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="images/avatar2.jpg" alt="用户头像">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">用户名</span>
+                                <span class="comment-date">2024-01-01</span>
+                            </div>
+                            <div class="comment-text">
+                                评论内容...
+                            </div>
+                            <div class="comment-actions">
+                                <button class="btn-reply">回复</button>
+                                <button class="btn-like"><i class="far fa-heart"></i> 10</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 更多评论... -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 微信分享弹窗 -->
+    <div class="modal" id="wechatModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>微信分享</h3>
+            <div class="qrcode">
+                <img src="images/share-qrcode.jpg" alt="分享二维码">
+                <p>扫描二维码分享到微信</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 打赏弹窗 -->
+    <div class="modal" id="rewardModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>感谢支持</h3>
+            <div class="reward-options">
+                <div class="reward-option">
+                    <img src="images/wechat-pay.jpg" alt="微信支付">
+                    <p>微信支付</p>
+                </div>
+                <div class="reward-option">
+                    <img src="images/alipay.jpg" alt="支付宝">
+                    <p>支付宝</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚（与首页相同） -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">关于我们</a>
+                    <a href="#">联系方式</a>
+                    <a href="#">友情链接</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2024 QIoooo. All rights reserved.</p>
+                    <p>ICP备案号：京ICP备XXXXXXXX号</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/article.js"></script>
+</body>
+</html> 

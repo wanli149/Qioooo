@@ -1,0 +1,227 @@
+/* 个人中心样式 */
+.profile-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.profile-sidebar {
+  flex: 0 0 250px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-avatar h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.user-role {
+  margin: 0;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.profile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-nav li {
+  margin-bottom: 10px;
+}
+
+.profile-nav a {
+  display: block;
+  padding: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.profile-nav li.active a,
+.profile-nav a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.profile-content {
+  flex: 1;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+}
+
+.profile-section {
+  display: none;
+}
+
+.profile-section.active {
+  display: block;
+}
+
+.profile-section h3 {
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+/* 表单样式 */
+.profile-form,
+.account-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.form-submit {
+  margin-top: 20px;
+}
+
+.form-submit button {
+  padding: 10px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit button:hover {
+  background: var(--accent-color);
+}
+
+/* 资源列表样式 */
+.download-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.download-list li {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.download-list li:last-child {
+  border-bottom: none;
+}
+
+.download-list a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.download-list a:hover {
+  color: var(--primary-color);
+}
+
+.download-date {
+  float: right;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+/* 分页样式 */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.pagination .current {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.pagination a:hover {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+    
+  .profile-sidebar {
+    flex: none;
+    margin-bottom: 20px;
+  }
+    
+  .profile-content {
+    padding: 20px;
+  }
+    
+  .download-date {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+} 

@@ -1,0 +1,43 @@
+.qioooo-import-export {
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.qioooo-import-export h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.qioooo-import-export form {
+  margin-bottom: 30px;
+}
+
+.qioooo-import-export input[type="file"] {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.qioooo-import-export .button {
+  margin-top: 10px;
+}
+
+.qioooo-import-export .notice {
+  margin: 15px 0;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 782px) {
+  .qioooo-import-export {
+    margin: 10px 0;
+    padding: 15px;
+  }
+    
+  .qioooo-import-export input[type="file"] {
+    margin-bottom: 15px;
+  }
+} 

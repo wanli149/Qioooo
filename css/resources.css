@@ -1,0 +1,279 @@
+/* 资源页面样式 */
+.resources-content {
+  padding: var(--spacing-xl) 0;
+}
+
+/* 资源导航 */
+.resources-nav {
+  margin-bottom: var(--spacing-xl);
+}
+
+.resources-nav ul {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resources-nav li {
+  margin-right: var(--spacing-lg);
+}
+
+.resources-nav a {
+  display: block;
+  padding: var(--spacing-sm) 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.resources-nav li.active a,
+.resources-nav a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* 资源筛选器 */
+.resources-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  margin-right: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.filter-group span {
+  margin-right: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.filter-group select {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.filter-tags a {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.filter-tags a:hover,
+.filter-tags a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 资源网格 */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* 资源卡片 */
+.resource-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.resource-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-image .tag {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card-image .tag.free {
+  background-color: #28a745;
+}
+
+.card-content {
+  padding: var(--spacing-md);
+}
+
+.card-content h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 18px;
+}
+
+.card-content h3 a {
+  color: var(--text-primary);
+}
+
+.card-content h3 a:hover {
+  color: var(--primary-color);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.meta span {
+  margin-right: var(--spacing-md);
+}
+
+.meta i {
+  margin-right: var(--spacing-xs);
+}
+
+.description {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.resource-info {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.resource-info span {
+  margin-right: var(--spacing-md);
+}
+
+.resource-info i {
+  margin-right: var(--spacing-xs);
+}
+
+.resource-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-download {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  margin-right: var(--spacing-md);
+}
+
+.btn-download:hover {
+  background-color: var(--primary-hover);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.rating i {
+  color: #ffc107;
+  margin-right: var(--spacing-xs);
+}
+
+.rating span {
+  margin-left: var(--spacing-xs);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .resources-nav li {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .resources-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-group {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resource-actions {
+    margin-top: var(--spacing-sm);
+  }
+} 

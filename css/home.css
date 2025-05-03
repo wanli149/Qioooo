@@ -1,0 +1,697 @@
+/* 首页样式 */
+.header {
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.main-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-lg);
+}
+
+.main-nav li {
+  position: relative;
+  margin: 0;
+}
+
+.main-nav a {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: right;
+}
+
+.main-nav a:hover::before {
+  width: 50%;
+}
+
+.main-nav a:hover::after {
+  width: 50%;
+}
+
+.main-nav a:hover,
+.main-nav li.active a {
+  color: var(--primary-color);
+}
+
+.main-nav li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0%;
+  }
+
+  to {
+    width: 20px;
+    opacity: 100%;
+  }
+}
+
+/* 菜单动画效果优化 */
+.main-nav a {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: right;
+}
+
+.main-nav a:hover::before {
+  width: 50%;
+}
+
+.main-nav a:hover::after {
+  width: 50%;
+}
+
+.main-nav .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  opacity: 0%;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: top;
+  will-change: transform, opacity;
+  z-index: 1000;
+  padding: var(--spacing-sm) 0;
+}
+
+.main-nav li:hover .submenu {
+  opacity: 100%;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.main-nav .submenu li {
+  margin: 0;
+}
+
+.main-nav .submenu a {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 0;
+  color: var(--text-primary);
+}
+
+.main-nav .submenu a:hover {
+  background-color: rgb(0 123 255 / 10%);
+  color: var(--primary-color);
+}
+
+/* 移动端菜单 */
+.mobile-menu-toggle {
+  display: none;
+  padding: var(--spacing-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgb(0 123 255 / 10%);
+}
+
+.mobile-menu-toggle i {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle.active {
+  transform: rotate(180deg);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  margin-right: var(--spacing-md);
+}
+
+.search-box input {
+  width: 200px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  padding-right: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.search-box i {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login {
+  margin-right: var(--spacing-md);
+}
+
+.social-icons a {
+  margin-left: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero区域 */
+.hero {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl) 0;
+}
+
+.hero-slider {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+
+.slide.active {
+  opacity: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-xl);
+  background: linear-gradient(to top, rgb(0 0 0 / 80%), transparent);
+  color: white;
+}
+
+.slide-content h2 {
+  font-size: 36px;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 主要内容区 */
+.main-content {
+  padding: var(--spacing-xl) 0;
+}
+
+.category-nav {
+  margin-bottom: var(--spacing-xl);
+}
+
+.category-nav ul {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category-nav li {
+  margin-right: var(--spacing-lg);
+}
+
+.category-nav a {
+  display: block;
+  padding: var(--spacing-sm) 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.category-nav li.active a,
+.category-nav a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.article-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.article-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-image .tag {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+}
+
+.card-content {
+  padding: var(--spacing-md);
+}
+
+.card-content h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 18px;
+}
+
+.card-content h3 a {
+  color: var(--text-primary);
+}
+
+.card-content h3 a:hover {
+  color: var(--primary-color);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.meta span {
+  margin-right: var(--spacing-md);
+}
+
+.meta i {
+  margin-right: var(--spacing-xs);
+}
+
+.excerpt {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-read {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+.interactions {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.interactions span {
+  margin-left: var(--spacing-md);
+}
+
+.interactions i {
+  margin-right: var(--spacing-xs);
+}
+
+/* 侧边栏 */
+.sidebar {
+  padding: var(--spacing-xl) 0;
+}
+
+.widget {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.widget h3 {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hot-posts ul {
+  list-style: none;
+}
+
+.hot-posts li {
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hot-posts li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.tag-cloud a {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+.tag-cloud a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.qrcode {
+  text-align: center;
+}
+
+.qrcode img {
+  max-width: 200px;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 页脚 */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: var(--spacing-xl) 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  margin-right: var(--spacing-md);
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.copyright {
+  text-align: right;
+  font-size: 14px;
+}
+
+.copyright p {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    height: auto;
+    padding: var(--spacing-md) 0;
+  }
+
+  .main-nav {
+    margin: var(--spacing-md) 0;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-slider {
+    height: 300px;
+  }
+
+  .slide-content h2 {
+    font-size: 24px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .main-nav.active {
+    transform: translateY(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 0;
+  }
+
+  .main-nav .submenu {
+    position: static;
+    box-shadow: none;
+    opacity: 100%;
+    visibility: visible;
+    transform: none;
+    background-color: var(--bg-secondary);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .main-nav li.active .submenu {
+    max-height: 500px;
+  }
+
+  .main-nav .submenu a {
+    padding-left: var(--spacing-xl);
+  }
+}
+
+/* 移动端菜单动画优化 */
+.mobile-menu-toggle {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.mobile-menu-toggle.active {
+  transform: rotate(180deg);
+}
+
+.main-nav.active {
+  transform: translateX(0);
+  opacity: 100%;
+  visibility: visible;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 菜单项图标动画 */
+.main-nav a i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav a:hover i {
+  transform: translateX(3px);
+} 

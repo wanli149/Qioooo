@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源中心 - QIoooo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏（与首页相同） -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">QIoooo</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="category.html">分类</a></li>
+                    <li class="active"><a href="resources.html">资源</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索资源...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" class="btn-login">登录/注册</a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 资源内容区 -->
+    <main class="resources-content">
+        <div class="container">
+            <!-- 资源分类导航 -->
+            <div class="resources-nav">
+                <ul>
+                    <li class="active"><a href="#">全部资源</a></li>
+                    <li><a href="#">软件工具</a></li>
+                    <li><a href="#">设计素材</a></li>
+                    <li><a href="#">电子书籍</a></li>
+                    <li><a href="#">视频教程</a></li>
+                </ul>
+            </div>
+
+            <!-- 资源筛选器 -->
+            <div class="resources-filter">
+                <div class="filter-group">
+                    <span>排序：</span>
+                    <select>
+                        <option>最新上传</option>
+                        <option>下载最多</option>
+                        <option>评分最高</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span>格式：</span>
+                    <div class="filter-tags">
+                        <a href="#" class="active">全部</a>
+                        <a href="#">PDF</a>
+                        <a href="#">ZIP</a>
+                        <a href="#">MP4</a>
+                        <a href="#">PSD</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 资源列表 -->
+            <div class="resources-grid">
+                <!-- 资源卡片 -->
+                <div class="resource-card">
+                    <div class="card-image">
+                        <img src="images/resource1.jpg" alt="资源封面">
+                        <span class="tag free">免费</span>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="resource-detail.html">资源标题示例</a></h3>
+                        <p class="meta">
+                            <span><i class="far fa-user"></i> 上传者</span>
+                            <span><i class="far fa-calendar"></i> 2024-01-01</span>
+                            <span><i class="fas fa-download"></i> 1000</span>
+                        </p>
+                        <p class="description">资源描述内容...</p>
+                        <div class="card-footer">
+                            <div class="resource-info">
+                                <span class="size"><i class="fas fa-file"></i> 10MB</span>
+                                <span class="format">PDF</span>
+                            </div>
+                            <div class="resource-actions">
+                                <a href="#" class="btn-download">下载</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(50)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多资源卡片... -->
+            </div>
+
+            <!-- 分页器 -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">10</a>
+                <a href="#" class="next">下一页</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚（与首页相同） -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">关于我们</a>
+                    <a href="#">联系方式</a>
+                    <a href="#">友情链接</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2024 QIoooo. All rights reserved.</p>
+                    <p>ICP备案号：京ICP备XXXXXXXX号</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html> 

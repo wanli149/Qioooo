@@ -1,0 +1,18 @@
+/*
+Theme Name: QIoooo
+Theme URI: https://your-domain.com/qioooo
+Author: Your Name
+Author URI: https://your-domain.com
+Description: 一个现代化的 WordPress 主题，支持暗黑模式和自定义主题设置
+Version: 1.0.0
+Requires at least: 5.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: qioooo
+Tags: custom-colors, custom-menu, featured-images, translation-ready, blog, right-sidebar, flexible-header, custom-background, custom-logo, editor-style, full-width-template, rtl-language-support, theme-options, threaded-comments, sticky-post
+*/
+
+/* 导入主样式文件 */
+@import 'css/style.css';
+@import 'css/animations.css'; 

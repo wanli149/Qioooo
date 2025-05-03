@@ -1,0 +1,161 @@
+/* 用户认证和社交登录样式 */
+.social-login {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.social-login h3 {
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-button i {
+  font-size: 18px;
+}
+
+.social-button.wechat {
+  background: #07c160;
+  color: #fff;
+}
+
+.social-button.wechat:hover {
+  background: #06ad56;
+}
+
+.social-button.qq {
+  background: #12b7f5;
+  color: #fff;
+}
+
+.social-button.qq:hover {
+  background: #0fa5de;
+}
+
+/* 登录/注册表单样式 */
+.login-form,
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.form-submit {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-submit button {
+  padding: 10px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit button:hover {
+  background: var(--accent-color);
+}
+
+.form-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.form-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.form-links a:hover {
+  color: var(--accent-color);
+}
+
+/* 错误消息样式 */
+.error-message {
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: var(--border-radius);
+  color: #c62828;
+}
+
+/* 成功消息样式 */
+.success-message {
+  margin: 10px 0;
+  padding: 10px;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: var(--border-radius);
+  color: #2e7d32;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 480px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+    
+  .social-button {
+    width: 100%;
+    justify-content: center;
+  }
+    
+  .login-form,
+  .register-form {
+    padding: 15px;
+  }
+} 

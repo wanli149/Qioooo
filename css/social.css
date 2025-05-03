@@ -1,0 +1,192 @@
+/* 社交媒体分享按钮 */
+.social-share-buttons {
+  margin: 20px 0;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.social-share-buttons h3 {
+  margin: 0 0 15px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.social-share-buttons ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-share-buttons li {
+  margin: 0;
+}
+
+.social-share-buttons a {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-share-buttons a:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-share-buttons i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* 社交媒体关注按钮 */
+.social-follow-buttons {
+  margin: 20px 0;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.social-follow-buttons h3 {
+  margin: 0 0 15px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.social-follow-buttons ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-follow-buttons li {
+  margin: 0;
+}
+
+.social-follow-buttons a {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-follow-buttons a:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-follow-buttons i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* 微信二维码弹窗 */
+.wechat-qrcode-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wechat-qrcode-modal .modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.wechat-qrcode-modal .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.wechat-qrcode-modal h3 {
+  margin: 0 0 15px;
+  color: var(--text-primary);
+}
+
+.wechat-qrcode-modal img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* 暗色模式优化 */
+.color-scheme-dark .social-share-buttons,
+.color-scheme-dark .social-follow-buttons {
+  background: var(--bg-secondary-dark);
+}
+
+.color-scheme-dark .social-share-buttons a,
+.color-scheme-dark .social-follow-buttons a {
+  background: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
+}
+
+.color-scheme-dark .social-share-buttons a:hover,
+.color-scheme-dark .social-follow-buttons a:hover {
+  background: var(--primary-color-dark);
+  color: white;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+  .social-share-buttons ul,
+  .social-follow-buttons ul {
+    justify-content: center;
+  }
+    
+  .social-share-buttons a,
+  .social-follow-buttons a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+    
+  .social-share-buttons i,
+  .social-follow-buttons i {
+    font-size: 16px;
+  }
+    
+  .wechat-qrcode-modal .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* RTL优化 */
+[dir="rtl"] .social-share-buttons i,
+[dir="rtl"] .social-follow-buttons i {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+[dir="rtl"] .wechat-qrcode-modal .close-modal {
+  right: auto;
+  left: 10px;
+} 

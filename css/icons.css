@@ -1,0 +1,310 @@
+/* 图标和图片样式 */
+
+/* 社交登录按钮 */
+.social-login-btn {
+  position: relative;
+  padding-left: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-login-btn::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 微信登录按钮 */
+.wechat-btn {
+  background-color: #07c160;
+  color: white;
+}
+
+.wechat-btn::before {
+  background-image: url("../images/wechat-icon.png");
+  background-color: white;
+}
+
+/* QQ登录按钮 */
+.qq-btn {
+  background-color: #12b7f5;
+  color: white;
+}
+
+.qq-btn::before {
+  background-image: url("../images/qq-icon.png");
+  background-color: white;
+}
+
+/* 用户头像 */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-default {
+  background: linear-gradient(45deg, #007bff, #0f8);
+}
+
+.avatar-default::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}
+
+.avatar-default::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* 下载按钮 */
+.download-btn {
+  position: relative;
+  padding-right: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/download-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 评论图标 */
+.comment-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.comment-icon::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  border: 2px solid currentcolor;
+  border-radius: 2px;
+  top: 2px;
+  left: 2px;
+}
+
+.comment-icon::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  bottom: 0;
+  left: 6px;
+}
+
+/* 点赞图标 */
+.like-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.like-icon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentcolor;
+  border-radius: 50% 50% 0 0;
+  top: 2px;
+  left: 4px;
+}
+
+.like-icon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: currentcolor;
+  bottom: 0;
+  left: 9px;
+}
+
+/* 分享图标 */
+.share-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.share-icon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentcolor;
+  border-radius: 2px;
+  top: 0;
+  left: 4px;
+}
+
+.share-icon::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  bottom: 0;
+  right: 0;
+}
+
+/* 加载动画 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(0 123 255 / 30%);
+  border-radius: 50%;
+  border-top-color: #007bff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+
+  to { transform: rotate(360deg); }
+}
+
+/* 主题设置预览 */
+.theme-preview {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.theme-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #007bff;
+}
+
+.theme-preview::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #f8f9fa;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .social-login-btn {
+    min-width: 160px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .download-btn {
+    min-width: 100px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .theme-preview {
+    width: 160px;
+    height: 120px;
+  }
+}
+
+/* 图标按钮优化 */
+.btn-icon i, .btn i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+
+.btn-icon:hover i, .btn:hover i {
+  transform: scale(1.15);
+}
+
+/* 社交图标悬停动画 */
+.social-icon {
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1) rotate(-8deg);
+}
+
+/* 图标无障碍 */
+.btn-icon[aria-label], .social-icon[aria-label] {
+  outline: none;
+} 

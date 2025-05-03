@@ -1,0 +1,70 @@
+/**
+ * 小工具测试样式
+ */
+
+.wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.updated, .error {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid;
+}
+
+.updated {
+    background: #f0f8f0;
+    border-left-color: #46b450;
+}
+
+.error {
+    background: #fef7f7;
+    border-left-color: #dc3232;
+}
+
+.spinner {
+    display: inline-block;
+    float: none;
+    margin: 0;
+    visibility: hidden;
+}
+
+.spinner.is-active {
+    visibility: visible;
+}
+
+#run-tests {
+    margin-right: 10px;
+}
+
+#test-results {
+    margin-top: 20px;
+}
+
+#results-content {
+    margin-top: 20px;
+}
+
+#results-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+#results-content li {
+    margin: 5px 0;
+} 

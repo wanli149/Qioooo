@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'layout';
+@use 'components';
+@use 'animations';
+
+// 主题切换
+:root {
+  @include theme-tech;
+}
+
+[data-theme="vibrant"] {
+  @include theme-vibrant;
+}
+
+[data-theme="elegant"] {
+  @include theme-elegant;
+}
+
+// 暗色模式
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-mode;
+  }
+}
+
+// 打印样式
+@media print {
+  @include print-styles;
+}
+
+// 无障碍样式
+@include accessibility-styles;
+
+// 滚动条样式
+@include scrollbar-styles;
+
+// 图片处理
+@include image-styles;
+
+// 文本截断
+@include text-truncation;
+
+// 视频容器
+@include video-container;
+
+// 二维码样式
+@include qrcode-styles;
+
+// 备案号样式
+@include record-number-styles; 

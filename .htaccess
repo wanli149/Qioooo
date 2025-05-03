@@ -1,0 +1,51 @@
+# 启用安全头
+<IfModule mod_headers.c>
+    # 防止点击劫持
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # 启用 XSS 过滤
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # 防止 MIME 类型嗅探
+    Header set X-Content-Type-Options "nosniff"
+    
+    # 启用 HSTS
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # 内容安全策略
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'"
+    
+    # 防止信息泄露
+    Header set X-Permitted-Cross-Domain-Policies "none"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 禁止访问敏感文件
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 禁止访问特定文件类型
+<FilesMatch "\.(env|config|git|svn|htaccess|htpasswd|ini|log|sh|inc|bak|swp)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 启用重写引擎
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # 强制 HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # 防止目录列表
+    Options -Indexes
+</IfModule>
+
+# 设置默认字符集
+AddDefaultCharset UTF-8
+
+# 设置时区
+SetEnv TZ Asia/Shanghai 

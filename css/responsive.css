@@ -1,0 +1,192 @@
+/* 移动端响应式优化 */
+@media screen and (max-width: 768px) {
+  /* 基础布局调整 */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .container {
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  /* 导航菜单优化 */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--bg-primary);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .main-nav.active {
+    transform: translateX(100%);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* 内容区域优化 */
+  .site-content {
+    margin-top: 60px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 侧边栏优化 */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--bg-primary);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    transform: translateX(-100%);
+  }
+
+  /* 表单优化 */
+  input, textarea, select {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* 按钮优化 */
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* 图片优化 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 表格优化 */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* 卡片优化 */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  /* 页脚优化 */
+  .site-footer {
+    padding: 20px 0;
+  }
+
+  .footer-widgets {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 加载动画优化 */
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* 触摸反馈优化 */
+  .btn, .card, .menu-item {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 滚动优化 */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 手势支持 */
+  .swipe-container {
+    touch-action: pan-y pinch-zoom;
+  }
+}
+
+/* 平板设备优化 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-widgets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 暗色模式移动端优化 */
+@media screen and (max-width: 768px) {
+  body.color-scheme-dark {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  .color-scheme-dark .main-nav,
+  .color-scheme-dark .sidebar {
+    background: var(--bg-secondary);
+  }
+
+  .color-scheme-dark .mobile-menu-toggle {
+    background: var(--primary-color);
+  }
+}
+
+/* RTL移动端优化 */
+@media screen and (max-width: 768px) {
+  [dir="rtl"] .main-nav {
+    left: auto;
+    right: -100%;
+  }
+
+  [dir="rtl"] .main-nav.active {
+    transform: translateX(-100%);
+  }
+
+  [dir="rtl"] .sidebar {
+    right: auto;
+    left: -100%;
+  }
+
+  [dir="rtl"] .sidebar.active {
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"] .mobile-menu-toggle {
+    right: auto;
+    left: 20px;
+  }
+}

@@ -1,0 +1,101 @@
+.chapter-navigation {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #fff;
+
+  &--default {
+    .chapter-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  }
+
+  &--compact {
+    .chapter-item {
+      padding: 0.3rem 0;
+    }
+        
+    .chapter-link {
+      font-size: 0.9rem;
+    }
+  }
+
+  &--expanded {
+    .chapter-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #eee;
+    }
+        
+    .chapter-link {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__progress {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    &__fill {
+      height: 100%;
+      background: #0073aa;
+      transition: width 0.3s ease;
+    }
+  }
+
+  .progress-text {
+    text-align: right;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  &__list {
+    .chapter-navigation__title {
+      margin: 0 0 1rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+  }
+
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .chapter-item {
+    padding: 0.5rem 0;
+  }
+
+  .chapter-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0073aa;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .chapter-navigation {
+    &--default,
+    &--expanded {
+      .chapter-list {
+        max-height: 300px;
+      }
+    }
+  }
+}
